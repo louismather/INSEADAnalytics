@@ -131,6 +131,7 @@ We can also transpose the matrix of returns to create a new "horizontal" matrix.
 1.Use nrow() and ncol()
 2. 
 ```{r echo=FALSE, comment=NA, warning=FALSE, message=FALSE,results='asis',fig.align='center', fig=TRUE}
+transposedData = t(StockReturns)
 portfolio = apply(transposedData,2,mean)
 names(portfolio) <- colnames(transposedData)
 pnl_plot(portfolio)
